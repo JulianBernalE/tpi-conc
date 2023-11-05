@@ -22,4 +22,8 @@ public class Complejo {
     public Complejo elevarAlCuadrado(){
         return new Complejo( ((this.real * this.real) - (this.imaginario * this.imaginario)) , (2* this.real * this.imaginario));
     } 
+    
+    public double calcularDistancia(){
+        return Math.sqrt(this.real * this.real + this.imaginario * this.imaginario) ;
+    }
 }

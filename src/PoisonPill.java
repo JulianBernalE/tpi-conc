@@ -1,9 +1,14 @@
 
 public class PoisonPill extends Task{
-    /*Ni idea is es asi */
+    private WorkerCounter wc;
+
+    public PoisonPill(WorkerCounter wc){
+        this.wc = wc ;
+    }
+
     public void run() {
+        this.wc.aumentar();
         throw new RuntimeException("mori");
     }
 
-    
 }

@@ -5,6 +5,7 @@ public class Worker extends Thread{
    public Worker ( Buffer buffer ) {
     this.buffer = buffer ;
     }
+    
     public void run () {
         try {
             while (true) {

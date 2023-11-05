@@ -1,6 +1,12 @@
 import java.awt.Color;
 public  class Convertor
 {
+    private int[][] colores;
+
+    public Convertor(int cant_iteraciones){
+        this.colores = convertir(cant_iteraciones);
+    }
+
     public int[][] convertir(int cant_iteraciones){
         int[] r = new int[ cant_iteraciones+1];
         int[] g = new int[ cant_iteraciones+1];
@@ -18,5 +24,10 @@ public  class Convertor
         int colores[][] = {r, g, b};
         return colores;
         
+    }
+
+    public int[] devolverColores(int iteraciones){
+        int coloresRGB[] = {colores[0][iteraciones], colores[1][iteraciones], colores[2][iteraciones]};
+        return coloresRGB ;
     }
 }
